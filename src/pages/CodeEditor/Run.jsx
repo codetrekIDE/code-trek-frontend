@@ -1,10 +1,10 @@
 import './Run.css';
-import {useState} from "react";
-import {CodeContext} from "./CodeEditor";
+import { useContext } from "react";
+import { CodeContext } from "./CodeEditor";
 
 const Run = () => {
-  const onRun = useState(CodeContext);
-  
+  const { onRun } = useContext(CodeContext);
+
   return (
     <button
       className="Run"

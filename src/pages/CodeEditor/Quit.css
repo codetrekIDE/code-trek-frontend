@@ -1,0 +1,32 @@
+.quit-button {
+  background-color: #e74c3c;
+  /* 붉은 색 계열로 눈에 띄게 설정 */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 8px;
+
+}
+
+.quit-button:hover {
+  background-color: #c0392b;
+  /* 호버 시 더 어두운 색으로 변경 */
+  transform: scale(1.05);
+  /* 약간 확대 효과 */
+}
+
+.quit-button:active {
+  background-color: #a93226;
+  /* 클릭 시 어두운 색상 */
+  transform: scale(0.95);
+  /* 클릭 시 살짝 작아지는 효과 */
+}
+
+.quit-container {
+  border: 1px solid white;
+  border-radius: 8px;
+}

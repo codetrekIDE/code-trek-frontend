@@ -1,11 +1,15 @@
-import {useContext} from "react";
-import {CodeContext} from "./CodeEditor";
+import { useContext } from "react";
+import { CodeContext } from "./CodeEditor";
+import './Quit.css'
 
 const Quit = () => {
-  const code = useContext(CodeContext);
-  
+  const { onSubmit } = useContext(CodeContext);
+
   return (
-    <button>
+    <button
+      className="quit-button"
+      onClick={onSubmit}
+    >
       Quit
     </button>
   );

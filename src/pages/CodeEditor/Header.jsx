@@ -1,18 +1,16 @@
 import Run from "./Run";
 import Quit from "./Quit";
+import './Header.css'
 
 const Header = () => {
 
   return (
-    <div>
-      <div style={{
-        textAlign: 'center',
-        height: '100%',
-      }}>
-        <Run/>
+    <div className="header-container">
+      <div className="run-container">
+        <Run />
       </div>
-      <div>
-        <Quit/>
+      <div className="quit-container">
+        <Quit />
       </div>
     </div>
   );
