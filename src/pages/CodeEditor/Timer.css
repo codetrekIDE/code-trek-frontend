@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    /* height: 20px; */
+    /* padding-left: 20px; */
+}
+
+.times {
+    font-size: 33px;
+    font-weight: bold;
+}

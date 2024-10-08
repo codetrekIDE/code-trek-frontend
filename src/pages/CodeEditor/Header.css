@@ -1,17 +1,31 @@
 .header-container {
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 10px 20px;
-  height: 100%;
+  /* gap: 10px; */
+  /* padding-bottom: 10px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  height: 100%; */
+}
+
+.timer-container {
+  flex: 1;
 }
 
 .run-container {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 .quit-container {
-  margin-left: auto;
+  cursor: pointer;
+  color: gray;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  /* margin-left: auto; */
 }

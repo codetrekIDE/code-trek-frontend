@@ -7,7 +7,7 @@ const Run = () => {
 
   return (
     <button
-      className="Run"
+      className="run-button"
       onClick={onRun}
     >
       Run

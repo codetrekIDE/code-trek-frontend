@@ -33,7 +33,7 @@ const projectUpdate = async (params) => {
 
 // 코드 수정
 const projectSave = async (params) => {
-  const data = JSON.stringify(params, ['code']);
+  const data = JSON.stringify(params, ['projectId', 'code']);
 
   const res = await API.put(url + '/save', data);
   return res;

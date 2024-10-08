@@ -1,10 +1,9 @@
 .output-container {
-  padding: 20px;
+  padding: 20px 0;
   border-radius: 10px;
-  background-color: #171616;
-  /* 빨간색 배경 */
+  background-color: #171616; 
   color: rgb(255, 255, 255);
   font-size: 10px;
-  height: 30vh;
+  height: 20vh;
   border: 1px solid white;
 }

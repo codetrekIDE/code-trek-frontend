@@ -1,6 +1,6 @@
 import { useState, useRef, createContext, useEffect } from "react";
 import Editor from "@monaco-editor/react";
-import { Header, Output } from "./index.js";
+import { Header, Output, Timer } from "./index.js";
 import executeCode from "../../api/executeCode.js";
 import { useNavigate, useParams } from "react-router-dom";
 import { projectSave } from "../../api/project.js";
@@ -54,9 +54,12 @@ const CodeEditor = () => {
     }
   };
 
-  const onSubmit = async (code) => {
+  const onSubmit = async (projectId, code) => {
     try {
-      const res = await projectSave({ 'code': code });
+      const res = await projectSave({
+        projectId: projectId,
+        code: code
+      });
       if (res.status === 200) {
         navigate('/');
       }
@@ -67,11 +70,11 @@ const CodeEditor = () => {
 
   return (
     <div>
-      <CodeContext.Provider value={{ code, result, onRun, onSubmit }}>
+      <CodeContext.Provider value={{projectId, code, result, onRun, onSubmit }}>
         <Header />
         <div>
           <Editor
-            height="50vh"
+            height="60vh"
             theme="vs-dark"
             defaultLanguage="python"
             onMount={onMount}

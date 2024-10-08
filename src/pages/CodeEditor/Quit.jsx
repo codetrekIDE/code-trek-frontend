@@ -3,12 +3,14 @@ import { CodeContext } from "./CodeEditor";
 import './Quit.css'
 
 const Quit = () => {
-  const { onSubmit } = useContext(CodeContext);
+  const { projectId, code, onSubmit } = useContext(CodeContext);
 
   return (
     <button
       className="quit-button"
-      onClick={onSubmit}
+      onClick={() => {
+        onSubmit(projectId, code);
+      }}
     >
       Quit
     </button>
