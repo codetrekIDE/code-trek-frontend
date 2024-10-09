@@ -1,6 +1,6 @@
 import { LogInContext } from "./LogIn.jsx";
 import { useContext } from "react";
-import './LogIn.css';
+import './Login.css';
 
 const Button = () => {
   const { signInHandler } = useContext(LogInContext);

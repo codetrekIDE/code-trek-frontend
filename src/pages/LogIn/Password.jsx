@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LogInContext } from "./LogIn.jsx";
-import './LogIn.css';
+import './Login.css';
 
 const Password = () => {
   const { password, setPassword } = useContext(LogInContext);

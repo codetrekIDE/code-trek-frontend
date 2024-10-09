@@ -3,7 +3,7 @@ import { signIn } from "../../api/auth.js";
 import { Username, Password, Button } from "./index.js";
 import { useNavigate } from "react-router-dom";
 import OsoriImage from "../../assets/Osori.jpg";
-import './LogIn.css';
+import './Login.css';
 
 export const LogInContext = createContext();
 
