@@ -34,7 +34,6 @@ const List = () => {
     try {
       const res = await projectList();
       if (res.status == 200) {
-        alert(res.data)
         setList(res.data);
       }
     } catch (error) {
