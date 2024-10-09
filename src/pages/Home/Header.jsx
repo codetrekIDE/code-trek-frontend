@@ -1,5 +1,3 @@
-import New from "./New.jsx";
-
 const Header = () => {
   return (
     <div>

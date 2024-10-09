@@ -1,17 +1,30 @@
 import { useEffect, useState } from "react";
 import { projectList } from "../../api/project.js";
 import Item from "./Item";
+import './List.css';
 
-const dummy = [
-  {
-    id: 1,
-    title: 'a',
-    updated_at: new Date(),
-  }
-]
+// const mockData = [
+//   {
+//     id: 0,
+//     title: "React 공부하기",
+//     updated_at: new Date().toLocaleString(),
+//   },
+//   {
+//     id: 1,
+//     title: "빨래하기",
+//     updated_at: new Date().toLocaleString(),
+//   },
+//   {
+//     id: 2,
+//     title: "노래 연습하기",
+//     updated_at: new Date().toLocaleString(),
+//   },
+// ];
+
 
 const List = () => {
-  const [list, setList] = useState(dummy);
+  // const [list, setList] = useState(mockData);
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     fetchProjects();
@@ -21,6 +34,7 @@ const List = () => {
     try {
       const res = await projectList();
       if (res.status == 200) {
+        alert(res.data)
         setList(res.data);
       }
     } catch (error) {
@@ -31,10 +45,13 @@ const List = () => {
 
   return (
     <div>
-      {list.map((project) => (
-        <Item key={project.id} project={project} />
-      ))}
+      <div className="item-container">
+        {list.map((project) => (
+          <Item key={project.id} project={project} />
+        ))}
+      </div>
     </div>
+
   );
 };
 

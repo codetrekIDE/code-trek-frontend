@@ -10,7 +10,7 @@ const projectList = async () => {
 
 const projectDetail = async (projectId) => {
   // 코드
-  const res = await API.get(url + '/' + projectId);
+  const res = await API.get(url + '/'+ projectId);
   return res;
 };
 
@@ -27,7 +27,7 @@ const projectCreate = async (params) => {
 const projectUpdate = async (params) => {
   const data = JSON.stringify(params, ['title', 'description']);
 
-  const res = await API.put(url + '/update', data);
+  const res = await API.patch(url + '/update', data);
   return res;
 };
 
@@ -35,7 +35,7 @@ const projectUpdate = async (params) => {
 const projectSave = async (params) => {
   const data = JSON.stringify(params, ['projectId', 'code']);
 
-  const res = await API.put(url + '/save', data);
+  const res = await API.patch(url + '/save', data);
   return res;
 };
 

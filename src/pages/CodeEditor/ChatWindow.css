@@ -1,0 +1,98 @@
+/* ChatWindow.css */
+.chat-window {
+  position: fixed;
+  top: 80px; /* 헤더 높이 */
+  right: 0;
+  width: 400px;
+  height: calc(100% - 300px);
+  background-color: #f1f1f1;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  z-index: 1001; /* 헤더보다 위에 위치 */
+  display: flex;
+  flex-direction: column;
+  animation: slide-in 0.3s ease-out;
+}
+
+.chat-header {
+  /* background-color: #4CAF50; */
+  background-color: #EAE2DC;
+  color: white;
+  color: black;
+  padding: 10px;
+  height: 50px;
+  border-bottom: black 3px solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #EAE2DC;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+    margin: 10px;
+    /* background-color: white; */
+
+    min-width: 50px;
+    max-width: 80%;
+    
+    /* align-self: flex-end;
+    margin-left: auto;
+    text-align: right; */
+
+    align-self: flex-start;
+    margin-right:auto;
+    text-align: left;
+
+    word-wrap: break-word; /* 오래된 속성 */
+    overflow-wrap: break-word; /* 표준 속성 */
+    white-space: normal; /* 줄바꿈 허용 */
+}
+
+.inputbox {
+    /* margin-top: 15px; */
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    background-color: #EAE2DC;
+    border-top: black 3px solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.inputbox button {
+    width: 100px;
+    height : 45px;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,18 +1,13 @@
 .run-button {
   width: 100px;
   height: 40px;
-  border: none;
+  border: 1px solid white;
   border-radius: 8px;
   background-color: #FFA500;
   font-size: 16px;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.run-container {
-  border: 1px solid white;
-  border-radius: 8px;
 }
 
 .run-button:hover {

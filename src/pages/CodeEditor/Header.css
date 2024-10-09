@@ -1,11 +1,13 @@
 .header-container {
   display: flex;
   align-items: center;
-  /* gap: 10px; */
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  /* align-items: center; */
   /* padding-bottom: 10px; */
   /* display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   padding: 10px;
   height: 100%; */
 }
@@ -14,18 +16,15 @@
   flex: 1;
 }
 
+
 .run-container {
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%); */
-}
+  
+} 
 
 .quit-container {
   cursor: pointer;
   color: gray;
   font-size: 14px;
-  border: none;
-  border-radius: 5px;
   padding: 5px;
   /* margin-left: auto; */
 }

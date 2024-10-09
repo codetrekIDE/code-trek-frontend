@@ -1,10 +1,12 @@
+import './Item.css';
+
 const Item = ({ project }) => {
-  const { id, title, updated_at } = project;
+  const { title, updated_at } = project;
 
   return (
-    <div>
+    <div className="item">
       <div>{title}</div>
-      <div>Updated: {new Date(updated_at).toLocaleString()}</div>
+      <div>{updated_at.toLocaleString()}</div>
     </div>
   );
 };

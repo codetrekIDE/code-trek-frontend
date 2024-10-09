@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 import { signIn } from "../../api/auth.js";
-import img from "../../assets/Osori.jpg";
 import { Username, Password, Button } from "./index.js";
-import './Login.css';
 import { useNavigate } from "react-router-dom";
+import OsoriImage from "../../assets/Osori.jpg";
+import './Login.css';
 
 export const LogInContext = createContext();
 
@@ -32,7 +32,7 @@ const LogIn = () => {
     <div className="container">
       {/* 왼쪽에 이미지 섹션 */}
       <div className="image-section">
-        <img src={img} alt="Login visual" className="login-image" />
+        <img src={OsoriImage} alt="Login visual" className="login-image" />
       </div>
 
       {/* 오른쪽에 로그인 섹션 */}

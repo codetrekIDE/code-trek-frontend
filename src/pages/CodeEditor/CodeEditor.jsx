@@ -1,9 +1,10 @@
 import { useState, useRef, createContext, useEffect } from "react";
 import Editor from "@monaco-editor/react";
-import { Header, Output, Timer } from "./index.js";
+import { Header, Output } from "./index.js";
 import executeCode from "../../api/executeCode.js";
 import { useNavigate, useParams } from "react-router-dom";
-import { projectSave } from "../../api/project.js";
+import { projectDetail, projectSave } from "../../api/project.js";
+import ChatWindow from "./ChatWindow.jsx";
 
 export const CodeContext = createContext();
 
@@ -21,7 +22,7 @@ const CodeEditor = () => {
 
   const projectLoad = async (projectId) => {
     try {
-      const res = await projectLoad(projectId);
+      const res = await projectDetail(projectId);
       if (res.status === 200) {
         setCode(res.data.code);
       }
@@ -47,7 +48,8 @@ const CodeEditor = () => {
     try {
       const res = await executeCode(code);
       if (res.status === 200) {
-        setResult(JSON.parse(res.data).result);
+        setResult(res.data.result);
+        // setResult(JSON.parse(res.data).result);
       }
     } catch (error) {
       console.log(error);
@@ -68,10 +70,19 @@ const CodeEditor = () => {
     }
   }
 
+  //--------채팅 추가하기---------
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const toggleChat = () => {
+    setIsChatOpen(prev => !prev);
+  };
+
+  //--------채팅 추가하기---------
+
   return (
     <div>
       <CodeContext.Provider value={{projectId, code, result, onRun, onSubmit }}>
-        <Header />
+        <Header onChatClick={toggleChat} />
         <div>
           <Editor
             height="60vh"
@@ -83,6 +94,7 @@ const CodeEditor = () => {
           />
           <Output />
         </div>
+        {isChatOpen && <ChatWindow onChatClick={toggleChat} />}
       </CodeContext.Provider>
     </div>
   );

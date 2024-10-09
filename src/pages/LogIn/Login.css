@@ -9,16 +9,17 @@ body {
 }
 
 .container {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;    
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
 
 .image-section {
-  width: 60%;
-  /* 위쪽 섹션 */
+  width: 60%; /* 위쪽 섹션 */
   padding-top: 20px;
   display: flex;
   justify-content: center;
@@ -27,12 +28,11 @@ body {
 
 .login-image {
   max-width: 80%;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .login-section {
-  width: 50%;
-  /*아래쪽 섹션 */
+  width: 50%; /*아래쪽 섹션 */
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -41,33 +41,32 @@ body {
 }
 
 
-.App>.textInput {
-  width: 100%;
-  max-width: 400px;
-  margin: 10px auto;
+.App > .textInput {
+  width: 100%; 
+  max-width: 400px; 
+  margin: 10px auto; 
   padding: 15px;
   font-size: 10px;
-  color: #888;
+  color: #888; 
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #171616;
-  display: block;
+  background-color: #171616; 
+  display: block; 
 }
 
 .loginButton {
-  width: calc(100% - 150px);
-  /* container 크기에서 양쪽 여백을 뺀 너비로 설정 */
-  padding: 15px;
-  font-size: 18px;
-  color: white;
-  background-color: #e74c3c;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin: 20px auto;
-  text-align: center;
-}
-
+      width: calc(100% - 150px); /* container 크기에서 양쪽 여백을 뺀 너비로 설정 */
+      padding: 15px;
+      font-size: 18px;
+      color: white;
+      background-color: #e74c3c; 
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 20px auto; 
+      text-align: center;
+  }
+  
 .loginButton:hover {
   background-color: #c03a2bca;
 }
@@ -76,13 +75,13 @@ body {
   font-size: 25px;
 }
 
-.signup {
+.signup{
   text-align: center;
   font-size: 10px;
   color: #ccccccaf;
   cursor: pointer;
 }
 
-.signup:hover {
-  color: #888888a1
+.signup:hover{
+  color:#888888a1
 }

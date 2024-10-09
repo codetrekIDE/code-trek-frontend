@@ -3,12 +3,14 @@ import { useContext } from "react";
 import { CodeContext } from "./CodeEditor";
 
 const Run = () => {
-  const { onRun } = useContext(CodeContext);
+  const { code, onRun } = useContext(CodeContext);
 
   return (
     <button
       className="run-button"
-      onClick={onRun}
+      onClick={() => {
+        onRun(code);
+      }}
     >
       Run
     </button >
@@ -16,3 +18,4 @@ const Run = () => {
 };
 
 export default Run;
+
